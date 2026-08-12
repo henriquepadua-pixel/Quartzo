@@ -1,0 +1,250 @@
+ /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fcf9f5;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #1e1e1e;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1);
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s;
+    }
+
+    /* ===== TIPOGRAFIA E CORES (contraste elevado) ===== */
+    h1, h2, h3, p, li, a, button, label {
+      color: #0a0a0a;  /* preto puro para máximo contraste */
+    }
+
+    a {
+      color: #0033cc;  /* azul forte (passa no contraste 7:1) */
+      text-decoration: underline;
+      text-underline-offset: 0.2rem;
+      font-weight: 500;
+    }
+
+    a:hover, a:focus {
+      background: #e6f0ff;
+      outline: 3px solid #0033cc;
+      outline-offset: 4px;
+      border-radius: 0.2rem;
+    }
+
+    /* ===== NAVEGAÇÃO POR TECLADO (foco visível) ===== */
+    :focus-visible {
+      outline: 4px solid #0033cc;
+      outline-offset: 4px;
+      border-radius: 0.3rem;
+    }
+
+    /* ===== HEADER / HERO ===== */
+    .hero {
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 1.8rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .subhead {
+      font-size: 1.3rem;
+      max-width: 700px;
+      color: #0a0a0a;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero .action-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      align-items: center;
+    }
+
+    .hero .action-links a {
+      font-size: 1.2rem;
+      padding: 0.6rem 0;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    /* ===== NAVEGAÇÃO PRINCIPAL ===== */
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem 2.5rem;
+      padding: 1rem 0 1.8rem 0;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #e0e0e0;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .main-nav a {
+      color: #0a0a0a;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      padding: 0.2rem 0;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      border-bottom-color: #0033cc;
+      background: transparent;
+    }
+
+    /* ===== GRADE DE ESTATÍSTICAS (WCAG) ===== */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.8rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+
+    .stat-card {
+      background: #f2f2f2;
+      padding: 1.8rem 1rem;
+      border-radius: 1.2rem;
+      text-align: center;
+      border: 2px solid #d0d0d0;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .stat-card .big-number {
+      display: block;
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+      color: #000;
+    }
+
+    .stat-card .label {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #0a0a0a;
+    }
+
+    /* destaque para o cartão "0 CAPTCHAs" */
+    .stat-card.highlight {
+      background: #d9e8ff;
+      border-color: #0033cc;
+    }
+
+    /* ===== SEÇÃO WCAG TÍTULO ===== */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 2.8rem 0 0.5rem 0;
+      letter-spacing: -0.01em;
+    }
+
+    .section-sub {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      color: #0a0a0a;
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 800px) {
+      .container { padding: 1.8rem 1.2rem; }
+      .hero h1 { font-size: 2.2rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero .subhead { font-size: 1.1rem; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .main-nav { gap: 1rem; }
+      .stat-card .big-number { font-size: 2.2rem; }
+    }
+
+    /* ===== FOOTER / rodapé com atalhos ===== */
+    .footer-note {
+      margin-top: 3rem;
+      padding-top: 1.8rem;
+      border-top: 2px solid #e0e0e0;
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-note a {
+      font-weight: 500;
+    }
+
+    /* ===== BOTÃO SIMBÓLICO (sem CAPTCHA) ===== */
+    .btn-demo {
+      display: inline-block;
+      background: #0033cc;
+      color: white !important;
+      padding: 0.6rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid #0033cc;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .btn-demo:hover,
+    .btn-demo:focus {
+      background: #002299;
+      border-color: #002299;
+      color: white !important;
+      outline: 3px solid #99bbff;
+      outline-offset: 2px;
+    }
+
+    /* ===== EXTRAS ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    /* pequeno ajuste para links que são botões */
+    .btn-like {
+      background: #0033cc;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      border: 2px solid #0033cc;
+    }
+
+    .btn-like:hover,
+    .btn-like:focus {
+      background: #002299;
+      border-color: #002299;
+      color: white;
+    }
