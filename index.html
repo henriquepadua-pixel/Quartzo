@@ -1,109 +1,107 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Web é para todas as pessoas · Acessibilidade</title>
+  <title>Quartzo · Apoiando e Conectando Pessoas</title>
   <link rel="stylesheet" href="./estilo.css">
-  <!-- CSS separado (dentro de <style> para demonstração, mas pode ser movido para .css) -->
-
 </head>
 <body>
   <div class="container">
 
     <!-- ===== HERO ===== -->
     <header class="hero">
-      <h1>A web é para todas as pessoas</h1>
+      <h1>Quartzo</h1>
       <p class="subhead">
-        Este site demonstra práticas de acessibilidade digital: navegação por teclado, contraste elevado, formulário sem CAPTCHA e vídeo com legendas em tempo real.
+        Uma plataforma criada para ajudar pessoas. Conectamos você a redes de apoio, recursos comunitários e orientação prática com total acessibilidade e simplicidade.
       </p>
       <div class="action-links">
-        <a href="#" aria-label="Ver recursos de acessibilidade">Ver recursos →</a>
-        <a href="#" aria-label="Entre em contato conosco">Entre em contato</a>
-        <!-- botão extra apenas para demonstrar foco e sem CAPTCHA -->
-        <a href="#" class="btn-like" style="margin-left: 0.2rem;">Formulário sem CAPTCHA</a>
+        <a href="#" aria-label="Buscar recursos de ajuda no Quartzo">Buscar Ajuda →</a>
+        <a href="#" aria-label="Entre em contato com a equipe Quartzo">Fale Conosco</a>
+        <a href="#" class="btn-like" style="margin-left: 0.2rem;">Pedir Apoio</a>
       </div>
     </header>
 
     <!-- ===== NAVEGAÇÃO PRINCIPAL ===== -->
     <nav class="main-nav" aria-label="Navegação principal">
       <a href="#">Início</a>
-      <a href="#">Recursos</a>
-      <a href="#">Vídeo</a>
+      <a href="#">Sobre o Quartzo</a>
+      <a href="#">Recursos de Apoio</a>
       <a href="#">Contato</a>
     </nav>
 
-    <!-- ===== TÍTULO WCAG ===== -->
-    <h2 class="section-title">WCAG 2.1 AA – ACESSIBILIDADE WEB</h2>
-    <p class="section-sub">Métricas que mostram o impacto da acessibilidade e o compromisso deste site.</p>
+    <!-- ===== TÍTULO IMPACTO ===== -->
+    <h2 class="section-title">PROJETO QUARTZO – APOIO E ACESSIBILIDADE</h2>
+    <p class="section-sub">Nossa missão é garantir que qualquer pessoa encontre ajuda rápida, sem barreiras digitais ou burocracia.</p>
 
     <!-- ===== GRADE DE ESTATÍSTICAS ===== -->
     <div class="stats-grid" role="list">
-      <!-- 96% -->
+      <!-- Pessoas Ajudadas -->
       <div class="stat-card" role="listitem">
-        <span class="big-number">96%</span>
-        <span class="label">Sites com barreiras de acessibilidade</span>
+        <span class="big-number">10k+</span>
+        <span class="label">Pessoas apoiadas pela rede</span>
       </div>
-      <!-- 7:1 -->
+      <!-- 100% Acessível -->
       <div class="stat-card" role="listitem">
-        <span class="big-number">7:1</span>
-        <span class="label">Razão de contraste desta página</span>
+        <span class="big-number">100%</span>
+        <span class="label">Acessível e gratuito para todos</span>
       </div>
-      <!-- 1 bi+ -->
+      <!-- Atendimento/Guias -->
       <div class="stat-card" role="listitem">
-        <span class="big-number">1 bi+</span>
-        <span class="label">Pessoas com deficiência no mundo</span>
+        <span class="big-number">24/7</span>
+        <span class="label">Guias de ajuda disponíveis</span>
       </div>
-      <!-- 0 CAPTCHAs (destaque) -->
+      <!-- Zero Barreiras -->
       <div class="stat-card highlight" role="listitem">
         <span class="big-number">0</span>
-        <span class="label">CAPTCHAs inacessíveis aqui</span>
+        <span class="label">Barreiras para pedir suporte</span>
       </div>
     </div>
 
-    <!-- ===== CONTEÚDO ADICIONAL PARA DEMONSTRAR "FORMULÁRIO SEM CAPTCHA" ===== -->
+    <!-- ===== FORMULÁRIO DE PEDIDO DE AJUDA ===== -->
     <div style="margin: 2.5rem 0 1rem 0; padding: 1.5rem; background: #f7f7f7; border-radius: 1.5rem; border-left: 6px solid #0033cc;">
-      <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">📬 Formulário de contato (sem CAPTCHA)</h3>
-      <p style="margin-bottom: 1rem;">Este formulário não utiliza CAPTCHA, garantindo acessibilidade para todos. Basta preencher e enviar.</p>
+      <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">📬 Precisa de apoio? Fale com o Quartzo</h3>
+      <p style="margin-bottom: 1rem;">Envie sua mensagem. Nosso formulário é simples, sem verificações complexas e focado em te atender rapidamente.</p>
       <form style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end;">
         <div style="flex: 1 1 200px;">
           <label for="nome" style="display: block; font-weight: 600;">Nome</label>
-          <input type="text" id="nome" placeholder="Seu nome" style="width: 100%; padding: 0.7rem; border: 2px solid #1e1e1e; border-radius: 0.8rem; background: white; font-size: 1rem;">
+          <input type="text" id="nome" placeholder="Como gostaria de ser chamado(a)?" style="width: 100%; padding: 0.7rem; border: 2px solid #1e1e1e; border-radius: 0.8rem; background: white; font-size: 1rem;">
         </div>
         <div style="flex: 1 1 200px;">
-          <label for="email" style="display: block; font-weight: 600;">E-mail</label>
-          <input type="email" id="email" placeholder="exemplo@email.com" style="width: 100%; padding: 0.7rem; border: 2px solid #1e1e1e; border-radius: 0.8rem; background: white; font-size: 1rem;">
+          <label for="email" style="display: block; font-weight: 600;">E-mail para retorno</label>
+          <input type="email" id="email" placeholder="seuemail@exemplo.com" style="width: 100%; padding: 0.7rem; border: 2px solid #1e1e1e; border-radius: 0.8rem; background: white; font-size: 1rem;">
         </div>
         <div style="flex: 0 0 auto;">
-          <button type="submit" style="background: #0033cc; border: none; color: white; font-weight: 700; padding: 0.7rem 2rem; border-radius: 40px; font-size: 1.1rem; cursor: pointer; border: 2px solid #0033cc;">Enviar</button>
+          <button type="submit" style="background: #0033cc; border: none; color: white; font-weight: 700; padding: 0.7rem 2rem; border-radius: 40px; font-size: 1.1rem; cursor: pointer; border: 2px solid #0033cc;">Enviar Mensagem</button>
         </div>
       </form>
-      <p style="margin-top: 0.8rem; font-size: 0.95rem; color: #0a0a0a;">✔ Nenhum CAPTCHA, apenas acessibilidade.</p>
+      <p style="margin-top: 0.8rem; font-size: 0.95rem; color: #0a0a0a;">✔ Atendimento humano, seguro e totalmente acessível.</p>
     </div>
 
-    <!-- ===== VÍDEO COM LEGENDAS (exemplo simbólico) ===== -->
+    <!-- ===== VÍDEO APRESENTAÇÃO ===== -->
     <div style="margin: 2.5rem 0 0.5rem 0;">
-      <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">🎬 Vídeo com legendas em tempo real</h3>
+      <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">🎬 Conheça como o Quartzo funciona</h3>
       <div style="background: #e8e8e8; border-radius: 1.5rem; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; border: 2px solid #b0b0b0;">
         <div style="width: 100%; max-width: 560px; aspect-ratio: 16/9; background: #1e1e1e; border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 500; font-size: 1.2rem;">
-          ▶️ Player de vídeo (legendas ativas)
+          ▶️ Vídeo explicativo do Quartzo (Com Legendas e Libras)
         </div>
-        <p style="margin-top: 0.8rem; font-weight: 500; color: #0a0a0a;">Legendas em português geradas em tempo real</p>
+        <p style="margin-top: 0.8rem; font-weight: 500; color: #0a0a0a;">Entenda o passo a passo para acessar nossos serviços e projetos voluntários.</p>
       </div>
     </div>
 
-    <!-- ===== RODAPÉ COM LINKS (acessíveis) ===== -->
+    <!-- ===== RODAPÉ ===== -->
     <footer class="footer-note">
-      <span>© 2026 · Acessibilidade digital</span>
+      <span>© 2026 · Projeto Quartzo — Ajudando pessoas</span>
       <span>
         <a href="#">Início</a> · 
+        <a href="#">Sobre</a> · 
         <a href="#">Recursos</a> · 
-        <a href="#">Vídeo</a> · 
         <a href="#">Contato</a>
       </span>
       <span style="display: flex; gap: 0.8rem;">
-        <a href="#" aria-label="WCAG 2.1 AA">WCAG 2.1 AA</a>
-        <a href="#" aria-label="Sem CAPTCHA">sem CAPTCHA</a>
+        <a href="#" aria-label="Diretrizes de Acessibilidade">Acessibilidade</a>
+        <a href="#" aria-label="Política de Privacidade">Privacidade</a>
       </span>
     </footer>
 
@@ -111,3 +109,5 @@
   <!-- fim .container -->
 </body>
 </html>
+
+```
